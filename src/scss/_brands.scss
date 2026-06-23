@@ -1,0 +1,332 @@
+.brands-title {
+  font-family: 'TTL', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $gray;
+  text-transform: uppercase;
+
+  padding: 16px;
+  margin: -24px -16px 24px;
+
+  background: linear-gradient(90deg, $bg-color 0%, $white 100%);
+
+  border-top: 1px solid $border-light;
+}
+
+.brands {
+  &-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  &-slider {
+    display: none;
+  }
+}
+
+.brand-card {
+  height: 72px;
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  img {
+    max-width: 110px;
+    max-height: 40px;
+    object-fit: contain;
+  }
+}
+
+.show-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 24px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: 'TTL', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  width: fit-content;
+
+  &-icon {
+    transition: 0.3s;
+  }
+
+  &.active .show-more-icon {
+    transform: rotate(180deg);
+  }
+}
+
+.devices {
+  &__title {
+    font-family: 'TTL', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray;
+    text-transform: uppercase;
+    padding: 16px;
+    margin: -24px -16px 24px;
+    background: linear-gradient(90deg, $bg-color 0%, $white 100%);
+    border-top: 1px solid $border-light;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  &__card {
+    background: $white;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      border-color: $accent;
+      box-shadow: 0 4px 16px $shadow-color;
+    }
+  }
+
+  &__card-name {
+    font-family: 'TTL', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  &__card-link {
+    align-self: flex-end;
+    display: flex;
+    transition: transform 0.3s;
+
+    .devices__card:hover & {
+      transform: translateX(4px);
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__show-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'TTL', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.register {
+  display: flex;
+  max-width: 1100px;
+  margin: 60px auto;
+  background: $white;
+
+  &__left {
+    background: url('../img/bg.jpg') no-repeat center/cover;
+    width: 50%;
+    padding: 30px;
+  }
+
+  &__logo {
+    width: 20%;
+  }
+
+  &__right {
+    font-family: 'Barlow', sans-serif;
+    width: 50%;
+    padding: 40px;
+  }
+
+  &__title {
+    color: $reg-heading;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    color: $reg-muted;
+    margin-bottom: 25px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 4px;
+    color: $white;
+    font-size: 13px;
+    cursor: pointer;
+    width: 210px;
+    height: 42px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &--fb {
+      background: $reg-facebook;
+    }
+
+    &--in {
+      background: $reg-linkedin;
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    color: $reg-muted;
+  }
+
+  &__divider-line {
+    flex: 1;
+    height: 1px;
+    background: $reg-line;
+  }
+
+  &__field {
+    display: flex;
+    gap: 10px;
+    border: 1px solid $reg-input-border;
+    border-left: 3px solid transparent;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+
+    &:focus-within {
+      border-left-color: $reg-primary;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 11px;
+    color: $reg-divider;
+    margin-bottom: 2px;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  &__section-title {
+    color: $reg-heading;
+    margin-bottom: 5px;
+  }
+
+  &__hint {
+    color: $reg-muted;
+    font-size: 13px;
+  }
+
+  &__radio-group {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  &__radio-label {
+    color: $reg-heading;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__info-box {
+    background: $reg-info-bg;
+    padding: 10px;
+    font-size: 13px;
+    color: $reg-muted;
+    margin-bottom: 15px;
+  }
+
+  &__checkbox {
+    font-size: 12px;
+    color: $reg-muted;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    a {
+      color: $reg-primary;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__submit {
+    background: $reg-primary;
+    border: none;
+    padding: 12px;
+    color: $white;
+    width: 45%;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($reg-primary, 10%);
+    }
+  }
+}

@@ -1,0 +1,154 @@
+//      TABLET
+
+@media (min-width: 768px) {
+  .line__left {
+    display: block;
+  }
+
+  .services {
+    &__content {
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    &__text {
+      width: 50%;
+    }
+
+    &__image {
+      width: 50%;
+    }
+
+    &__text-hidden {
+      display: block;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    &__logo-mid {
+      display: flex;
+    }
+  }
+
+  .devices__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+//      TABLET BRANDS
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    .brand-card:nth-child(n + 7) {
+      display: none;
+    }
+
+    &.open .brand-card {
+      display: flex;
+    }
+  }
+}
+
+//      DESKTOP
+
+@media (min-width: 1120px) {
+  .services {
+    padding: 40px;
+
+    &__header {
+      display: none;
+    }
+
+    &__actions {
+      display: flex;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__tab--reviews {
+      display: block;
+    }
+
+    &__menu {
+      flex-wrap: wrap;
+      overflow: visible;
+    }
+
+    &__text-hidden {
+      overflow: visible;
+      height: auto;
+    }
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    .brand-card:nth-child(n + 9) {
+      display: none;
+    }
+
+    &.open .brand-card {
+      display: flex;
+    }
+  }
+}
+
+//      TABLET REGISTER
+
+@media (max-width: 1119px) {
+  .register {
+    flex-direction: column;
+    margin: 30px 16px;
+
+    &__left {
+      width: 100%;
+      height: 200px;
+    }
+
+    &__right {
+      width: 100%;
+      padding: 24px;
+    }
+
+    &__socials {
+      flex-direction: column;
+    }
+
+    &__social-btn {
+      width: 100%;
+    }
+
+    &__submit {
+      width: 100%;
+    }
+  }
+}
+
+//  MOBILE BRANDS
+
+@media (max-width: 767px) {
+  .brands-grid {
+    display: none;
+  }
+
+  .brands-slider {
+    display: block;
+  }
+
+  .swiper-slide {
+    width: 240px !important;
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .show-more {
+    display: none;
+  }
+}

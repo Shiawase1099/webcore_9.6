@@ -1,0 +1,116 @@
+.services {
+  background: $bg-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid $border-light;
+    background: $white;
+  }
+
+  &__logo-left,
+  &__logo-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 50px;
+  }
+
+  &__logo-mid {
+    display: none;
+    margin-left: auto;
+    gap: 16px;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    border-left: 4px solid $accent;
+    padding-left: 12px;
+  }
+
+  &__actions {
+    display: none;
+    gap: 32px;
+  }
+
+  &__title-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__tab {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: $bg-color;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &--active {
+      border-color: $accent;
+    }
+
+    &--reviews {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.5;
+
+    &-hidden {
+      display: none;
+    }
+  }
+
+  &__read-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-weight: 500;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}
+.right__part {
+  margin-left: 320px;
+}

@@ -1,0 +1,15 @@
+.line {
+  &__left {
+    background: $gray;
+    width: 0.5px;
+    height: 32px;
+    display: none;
+  }
+
+  &__right {
+    background: $gray;
+    width: 0.5px;
+    height: 32px;
+    margin-left: 20px;
+  }
+}
