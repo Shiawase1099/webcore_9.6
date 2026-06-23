@@ -1,7 +1,5 @@
 import '../scss/style.scss'
 
-console.log('It works!')
-
 const button = document.querySelector('.show-more')
 const buttonText = document.querySelector('.show-more-text')
 const grid = document.querySelector('.brands-grid')
