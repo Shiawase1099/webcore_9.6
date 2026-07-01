@@ -114,3 +114,173 @@
 .right__part {
   margin-left: 0;
 }
+
+.prices {
+  padding: 16px;
+  background: $bg-color;
+
+  &__container {
+    background: $white;
+    padding: 20px 16px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr 110px 120px 148px;
+    padding-bottom: 12px;
+    font-size: 12px;
+    color: $gray;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 110px 120px 148px;
+    align-items: center;
+    padding: 14px 0;
+    border-top: 1px solid $border-color;
+    font-size: 13px;
+    color: $text-color;
+  }
+
+  &__cards {
+    display: none;
+    position: relative;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #ff3461;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__note {
+    font-size: 11px;
+    line-height: 1.6;
+    color: $text-color;
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: $text-color;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-top: 2px solid $text-color;
+      border-right: 2px solid $text-color;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__label {
+    font-size: 11px;
+    color: $gray;
+  }
+
+  &__value {
+    font-size: 13px;
+    color: $text-color;
+  }
+
+  .prices__btn {
+    align-self: flex-start;
+  }
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 16px;
+  background: $bg-color;
+  border-top: 1px solid $border-color;
+  gap: 16px;
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    color: $gray;
+  }
+
+  &__privacy {
+    font-size: 12px;
+    color: $text-color;
+    text-decoration: none;
+    align-self: center;
+  }
+
+  &__info {
+    font-size: 11px;
+    color: $gray;
+    line-height: 1.5;
+    text-align: right;
+    max-width: 220px;
+  }
+}

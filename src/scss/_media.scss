@@ -33,6 +33,47 @@
   .devices__grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .prices {
+    &__table {
+      display: block;
+    }
+
+    &__cards {
+      display: none;
+    }
+  }
+}
+
+//      TABLET MENU
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .menu {
+    display: flex;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+}
+
+//      TABLET DEVICES
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .devices__grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    .devices__card:nth-child(n + 4) {
+      display: none;
+    }
+
+    &.open .devices__card {
+      display: flex;
+    }
+  }
 }
 
 //      TABLET BRANDS
@@ -56,6 +97,13 @@
 @media (min-width: 1120px) {
   .menu {
     display: flex;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+
+    .js-menu-toggle {
+      display: none;
+    }
   }
 
   .right__part {
@@ -114,10 +162,15 @@
 
   .brands-slider {
     display: block;
-  }
 
-  .swiper-slide {
-    width: 240px !important;
+    .brand-card {
+      height: 120px;
+      padding: 0 40px;
+
+      img:last-child {
+        display: none;
+      }
+    }
   }
 
   .swiper-pagination {
@@ -127,5 +180,47 @@
 
   .show-more {
     display: none;
+  }
+}
+
+//  MOBILE DEVICES
+
+@media (max-width: 767px) {
+  .devices__grid {
+    display: none;
+  }
+
+  .devices-slider {
+    display: block;
+
+    .devices__card {
+      padding-right: 40px;
+
+      &-link {
+        display: none;
+      }
+    }
+  }
+
+  .devices__show-all {
+    display: none;
+  }
+}
+
+//  MOBILE PRICES
+
+@media (max-width: 767px) {
+  .prices {
+    &__table {
+      display: none;
+    }
+
+    &__cards {
+      display: block;
+    }
+  }
+
+  .price-card {
+    padding-right: 40px;
   }
 }

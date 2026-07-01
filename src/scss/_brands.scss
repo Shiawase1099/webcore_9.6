@@ -21,7 +21,55 @@
 
   &-slider {
     display: none;
+    position: relative;
   }
+}
+
+.devices-slider {
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  background: #ff3461;
+  border-radius: 50%;
+
+  &::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid $white;
+    border-right: 2px solid $white;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.swiper-button-next {
+  right: 12px;
+
+  &::after {
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+}
+
+.swiper-button-prev {
+  left: 12px;
+
+  &::after {
+    transform: rotate(-135deg) translate(1px, 1px);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $text-color;
 }
 
 .brand-card {
@@ -88,6 +136,10 @@
     gap: 16px;
   }
 
+  &-slider {
+    display: none;
+  }
+
   &__card {
     background: $white;
     border: 1px solid $border-color;
@@ -142,6 +194,14 @@
     font-weight: 500;
     color: $text-color;
     transition: opacity 0.3s;
+
+    img {
+      transition: transform 0.3s;
+    }
+
+    &.active img {
+      transform: rotate(180deg);
+    }
 
     &:hover {
       opacity: 0.6;

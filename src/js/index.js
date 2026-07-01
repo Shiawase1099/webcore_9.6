@@ -1,5 +1,48 @@
 import '../scss/style.scss'
 
+const menu = document.querySelector('.menu')
+const overlay = document.querySelector('.overlay')
+const burgerIcon = document.querySelector('.js-burger-icon')
+const isTablet = () => window.matchMedia('(min-width: 768px) and (max-width: 1119px)').matches
+
+const closeMenu = () => {
+  menu.classList.remove('menu--open')
+  overlay.classList.remove('overlay--active')
+  burgerIcon.src = './img/line.svg'
+}
+
+const openMenu = () => {
+  menu.classList.add('menu--open')
+  overlay.classList.add('overlay--active')
+  burgerIcon.src = './img/burger.svg'
+}
+
+document.querySelectorAll('.js-menu-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (!isTablet()) return
+    menu.classList.contains('menu--open') ? closeMenu() : openMenu()
+  })
+})
+
+overlay.addEventListener('click', () => {
+  if (!isTablet()) return
+  closeMenu()
+})
+
+window.addEventListener('resize', () => {
+  if (!isTablet()) closeMenu()
+})
+
+const devicesShowAll = document.querySelector('.devices__show-all')
+const devicesGrid = document.querySelector('.devices__grid')
+const devicesShowAllText = devicesShowAll.querySelector('span')
+
+devicesShowAll.addEventListener('click', () => {
+  devicesGrid.classList.toggle('open')
+  devicesShowAll.classList.toggle('active')
+  devicesShowAllText.textContent = devicesGrid.classList.contains('open') ? 'Скрыть' : 'Показать все'
+})
+
 const button = document.querySelector('.show-more')
 const buttonText = document.querySelector('.show-more-text')
 const grid = document.querySelector('.brands-grid')
@@ -15,12 +58,47 @@ button.addEventListener('click', () => {
   }
 })
 
-new Swiper('.swiper', {
-  slidesPerView: 'auto',
+new Swiper('.brands-slider', {
+  slidesPerView: 1,
   spaceBetween: 16,
 
   pagination: {
     el: '.swiper-pagination',
     clickable: true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+})
+
+new Swiper('.devices-slider', {
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+})
+
+new Swiper('.prices-slider', {
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   }
 })
