@@ -1,0 +1,109 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: $white;
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+  border-right: 1px solid $border-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+
+  &__header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__logo {
+    height: 32px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    flex: 1;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s;
+
+    &--active {
+      font-weight: 700;
+    }
+
+    &:hover {
+      border-left-color: $accent;
+    }
+  }
+
+  &__footer {
+    padding: 16px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__mail {
+    display: block;
+    font-size: 14px;
+    color: $text-color;
+    text-decoration: none;
+    margin-bottom: 4px;
+  }
+
+  &__phone {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: $text-color;
+    text-decoration: none;
+    margin-bottom: 12px;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__lang-btn {
+    padding: 4px 8px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'TTL', sans-serif;
+    font-size: 14px;
+
+    &--active {
+      background: $text-color;
+      color: $white;
+      border-color: $text-color;
+    }
+  }
+}

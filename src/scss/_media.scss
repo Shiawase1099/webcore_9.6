@@ -54,6 +54,14 @@
 //      DESKTOP
 
 @media (min-width: 1120px) {
+  .menu {
+    display: flex;
+  }
+
+  .right__part {
+    margin-left: 300px;
+  }
+
   .services {
     padding: 40px;
 
