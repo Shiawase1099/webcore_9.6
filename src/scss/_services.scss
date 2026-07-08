@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: 50px;
   }
 
   &__logo-mid {
@@ -125,11 +124,15 @@
   }
 
   &__title {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: $text-color;
-    margin-bottom: 20px;
+    font-family: 'TTL', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray;
+    text-transform: uppercase;
+    padding: 16px;
+    margin: -24px -16px 24px;
+    background: linear-gradient(90deg, $bg-color 0%, $white 100%);
+    border-top: 1px solid $border-light;
   }
 
   &__head {

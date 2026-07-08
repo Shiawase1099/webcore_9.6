@@ -1,0 +1,108 @@
+.prices {
+  background: #f8f8f8;
+  padding: 32px 0;
+
+  &__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    padding: 16px 24px;
+    margin-left: -24px;
+    margin-right: -24px;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $gray;
+
+    background: linear-gradient(90deg, $bg-color 0%, $white 100%);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: $white;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  &__table thead th {
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray;
+    background: $bg-color;
+  }
+
+  &__table tbody td {
+    padding: 20px 24px;
+    font-size: 14px;
+    color: $text-color;
+    border-bottom: 1px solid $border-color;
+    vertical-align: middle;
+  }
+
+  &__table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  &__table tbody td:nth-child(2),
+  &__table tbody td:nth-child(3) {
+    width: 140px;
+    white-space: nowrap;
+  }
+
+  &__table tbody td:last-child {
+    width: 160px;
+    text-align: right;
+  }
+
+  &__btn {
+    width: 120px;
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+    background: #ff3e79;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #e63368;
+    }
+  }
+
+  &__offer {
+    margin-top: 24px;
+    max-width: 420px;
+  }
+
+  &__note {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-color;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  &__cards {
+    display: none;
+  }
+}

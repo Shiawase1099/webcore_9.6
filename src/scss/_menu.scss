@@ -29,10 +29,6 @@
     cursor: pointer;
   }
 
-  &__logo {
-    height: 32px;
-  }
-
   &__nav {
     display: flex;
     flex-direction: column;
@@ -101,9 +97,8 @@
     font-size: 14px;
 
     &--active {
-      background: $text-color;
-      color: $white;
-      border-color: $text-color;
+      background: $white;
+      color: $gray;
     }
   }
 }

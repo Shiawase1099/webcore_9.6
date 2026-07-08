@@ -3,7 +3,8 @@ import '../scss/style.scss'
 const menu = document.querySelector('.menu')
 const overlay = document.querySelector('.overlay')
 const burgerIcon = document.querySelector('.js-burger-icon')
-const isTablet = () => window.matchMedia('(min-width: 768px) and (max-width: 1119px)').matches
+const isTablet = () =>
+  window.matchMedia('(min-width: 768px) and (max-width: 1119px)').matches
 
 const closeMenu = () => {
   menu.classList.remove('menu--open')
@@ -17,7 +18,7 @@ const openMenu = () => {
   burgerIcon.src = './img/burger.svg'
 }
 
-document.querySelectorAll('.js-menu-toggle').forEach(btn => {
+document.querySelectorAll('.js-menu-toggle').forEach((btn) => {
   btn.addEventListener('click', () => {
     if (!isTablet()) return
     menu.classList.contains('menu--open') ? closeMenu() : openMenu()
@@ -40,7 +41,9 @@ const devicesShowAllText = devicesShowAll.querySelector('span')
 devicesShowAll.addEventListener('click', () => {
   devicesGrid.classList.toggle('open')
   devicesShowAll.classList.toggle('active')
-  devicesShowAllText.textContent = devicesGrid.classList.contains('open') ? 'Скрыть' : 'Показать все'
+  devicesShowAllText.textContent = devicesGrid.classList.contains('open')
+    ? 'Скрыть'
+    : 'Показать все'
 })
 
 const button = document.querySelector('.show-more')
@@ -59,46 +62,31 @@ button.addEventListener('click', () => {
 })
 
 new Swiper('.brands-slider', {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 16,
 
   pagination: {
     el: '.swiper-pagination',
     clickable: true
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
   }
 })
 
 new Swiper('.devices-slider', {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 16,
 
   pagination: {
     el: '.swiper-pagination',
     clickable: true
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
   }
 })
 
 new Swiper('.prices-slider', {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 16,
 
   pagination: {
     el: '.swiper-pagination',
     clickable: true
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
   }
 })
