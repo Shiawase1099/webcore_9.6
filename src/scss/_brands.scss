@@ -29,51 +29,13 @@
   position: relative;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  top: 50%;
-  width: 32px;
-  height: 32px;
-  margin-top: -16px;
-  background: #ff3461;
-  border-radius: 50%;
-
-  &::after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid $white;
-    border-right: 2px solid $white;
-  }
-
-  &.swiper-button-disabled {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.swiper-button-next {
-  right: 12px;
-
-  &::after {
-    transform: rotate(45deg) translate(-1px, -1px);
-  }
-}
-
-.swiper-button-prev {
-  left: 12px;
-
-  &::after {
-    transform: rotate(-135deg) translate(1px, 1px);
-  }
-}
-
 .swiper-pagination-bullet-active {
   background: $text-color;
 }
 
 .brand-card {
   height: 72px;
+  width: auto;
   background: $white;
   border: 1px solid $border-color;
   border-radius: 6px;
@@ -149,7 +111,9 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 120px;
-    transition: box-shadow 0.3s, border-color 0.3s;
+    transition:
+      box-shadow 0.3s,
+      border-color 0.3s;
     cursor: pointer;
     text-decoration: none;
 

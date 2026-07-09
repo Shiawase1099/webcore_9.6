@@ -35,10 +35,6 @@
   }
 
   .prices {
-    &__table {
-      display: block;
-    }
-
     &__cards {
       display: none;
     }
@@ -47,7 +43,7 @@
 
 //      TABLET MENU
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (min-width: 768px) {
   .menu {
     display: flex;
     transform: translateX(-100%);
@@ -62,7 +58,7 @@
 
 //      TABLET DEVICES
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (min-width: 768px) {
   .devices__grid {
     grid-template-columns: repeat(3, 1fr);
 
@@ -78,7 +74,7 @@
 
 //      TABLET BRANDS
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (min-width: 768px) {
   .brands-grid {
     grid-template-columns: repeat(3, 1fr);
 
@@ -156,6 +152,17 @@
 //  MOBILE BRANDS
 
 @media (max-width: 767px) {
+  .menu {
+    display: flex;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
   .brands-grid {
     display: none;
   }
@@ -205,22 +212,12 @@
   .devices__show-all {
     display: none;
   }
-}
 
-//  MOBILE PRICES
-
-@media (max-width: 767px) {
-  .prices {
-    &__table {
-      display: none;
-    }
-
-    &__cards {
-      display: block;
-    }
+  .prices__table {
+    display: none;
   }
 
-  .price-card {
-    padding-right: 40px;
+  .prices__cards {
+    display: block;
   }
 }

@@ -3,8 +3,7 @@ import '../scss/style.scss'
 const menu = document.querySelector('.menu')
 const overlay = document.querySelector('.overlay')
 const burgerIcon = document.querySelector('.js-burger-icon')
-const isTablet = () =>
-  window.matchMedia('(min-width: 768px) and (max-width: 1119px)').matches
+const isTablet = () => window.matchMedia('(max-width: 1119px)').matches
 
 const closeMenu = () => {
   menu.classList.remove('menu--open')
