@@ -74,9 +74,8 @@
             <img src="./img/call.svg" alt="">
             <img src="./img/chat.svg" alt="">
             <img src="./img/profile.svg" alt="">
-            <div class="line__right"></div>
           </div>
-
+          <div class="line__right"></div>
           <div class="services__logo-right">
             <img src="./img/repair.svg" alt="">
             <img src="./img/checkstatus.svg" alt="">
@@ -259,8 +258,6 @@
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
           <button class="show-more">
             <img class="show-more-icon" src="/img/expand.svg" alt="arrow">
@@ -334,8 +331,6 @@
               </a>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
 
           <button class="devices__show-all">
@@ -349,141 +344,188 @@
         <div class="prices__container">
           <h2 class="prices__title">ЦЕНЫ НА УСЛУГИ</h2>
 
-          <div class="prices__table">
-            <div class="prices__head">
-              <span>Ремонтные услуги</span>
-              <span>Цена</span>
-              <span>Срок</span>
-              <span></span>
-            </div>
+          <table class="prices__table">
+            <thead>
+              <tr>
+                <th>Ремонтные услуги</th>
+                <th>Цена</th>
+                <th>Срок</th>
+                <th></th>
+              </tr>
+            </thead>
 
-            <div class="prices__row">
-              <span class="prices__name">Диагностика</span>
-              <span class="prices__price">Бесплатно</span>
-              <span class="prices__time">30 мин</span>
-              <button class="prices__btn">ЗАКАЗАТЬ</button>
-            </div>
+            <tbody>
+              <tr>
+                <td>Диагностика</td>
+                <td>Бесплатно</td>
+                <td>30 мин</td>
+                <td>
+                  <button class="prices__btn">ЗАКАЗАТЬ</button>
+                </td>
+              </tr>
 
-            <div class="prices__row">
-              <span class="prices__name">Замена дисплея</span>
-              <span class="prices__price">1 000 ₽</span>
-              <span class="prices__time">30-120 мин</span>
-              <button class="prices__btn">ЗАКАЗАТЬ</button>
-            </div>
+              <tr>
+                <td>Замена дисплея</td>
+                <td>1 000 ₽</td>
+                <td>30–120 мин</td>
+                <td>
+                  <button class="prices__btn">ЗАКАЗАТЬ</button>
+                </td>
+              </tr>
 
-            <div class="prices__row">
-              <span class="prices__name">Замена полифонического динамика</span>
-              <span class="prices__price">1 000 ₽</span>
-              <span class="prices__time">30-120 мин</span>
-              <button class="prices__btn">ЗАКАЗАТЬ</button>
-            </div>
+              <tr>
+                <td>Замена полифонического динамика</td>
+                <td>1 000 ₽</td>
+                <td>30–120 мин</td>
+                <td>
+                  <button class="prices__btn">ЗАКАЗАТЬ</button>
+                </td>
+              </tr>
 
-            <div class="prices__row">
-              <span class="prices__name">Тестирование с выдачей технического заключения</span>
-              <span class="prices__price">1 000 ₽</span>
-              <span class="prices__time">30-120 мин</span>
-              <button class="prices__btn">ЗАКАЗАТЬ</button>
-            </div>
+              <tr>
+                <td>Тестирование с выдачей технического заключения</td>
+                <td>1 000 ₽</td>
+                <td>30–120 мин</td>
+                <td>
+                  <button class="prices__btn">ЗАКАЗАТЬ</button>
+                </td>
+              </tr>
 
-            <div class="prices__row">
-              <span class="prices__name">Замена программного обеспечения</span>
-              <span class="prices__price">1 000 ₽</span>
-              <span class="prices__time">30-120 мин</span>
-              <button class="prices__btn">ЗАКАЗАТЬ</button>
-            </div>
-          </div>
+              <tr>
+                <td>Замена программного обеспечения</td>
+                <td>1 000 ₽</td>
+                <td>30–120 мин</td>
+                <td>
+                  <button class="prices__btn">ЗАКАЗАТЬ</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
+          
           <div class="prices__cards prices-slider swiper">
             <div class="prices-list swiper-wrapper">
               <div class="price-card swiper-slide">
-                <span class="price-card__name">Диагностика</span>
-                <div class="price-card__meta">
-                  <div class="price-card__meta-item">
+                <h3 class="price-card__title">Диагностика</h3>
+
+                <div class="price-card__info">
+                  <div class="price-card__item">
                     <span class="price-card__label">Цена</span>
                     <span class="price-card__value">Бесплатно</span>
                   </div>
-                  <div class="price-card__meta-item">
+
+                  <div class="price-card__item">
                     <span class="price-card__label">Срок</span>
                     <span class="price-card__value">30 мин</span>
                   </div>
                 </div>
-                <button class="prices__btn">ЗАКАЗАТЬ</button>
+
+                <button class="price-card__btn">
+                  ЗАКАЗАТЬ
+                  <img src="./img/go.svg" alt="">
+                </button>
               </div>
 
               <div class="price-card swiper-slide">
-                <span class="price-card__name">Замена дисплея</span>
-                <div class="price-card__meta">
-                  <div class="price-card__meta-item">
+                <h3 class="price-card__title">Замена дисплея</h3>
+
+                <div class="price-card__info">
+                  <div class="price-card__item">
                     <span class="price-card__label">Цена</span>
                     <span class="price-card__value">1 000 ₽</span>
                   </div>
-                  <div class="price-card__meta-item">
+
+                  <div class="price-card__item">
                     <span class="price-card__label">Срок</span>
-                    <span class="price-card__value">30-120 мин</span>
+                    <span class="price-card__value">30–120 мин</span>
                   </div>
                 </div>
-                <button class="prices__btn">ЗАКАЗАТЬ</button>
+
+                <button class="price-card__btn">
+                  ЗАКАЗАТЬ
+                  <img src="./img/go.svg" alt="">
+                </button>
               </div>
 
               <div class="price-card swiper-slide">
-                <span class="price-card__name">Замена полифонического динамика</span>
-                <div class="price-card__meta">
-                  <div class="price-card__meta-item">
+                <h3 class="price-card__title">Замена полифонического динамика</h3>
+
+                <div class="price-card__info">
+                  <div class="price-card__item">
                     <span class="price-card__label">Цена</span>
                     <span class="price-card__value">1 000 ₽</span>
                   </div>
-                  <div class="price-card__meta-item">
+
+                  <div class="price-card__item">
                     <span class="price-card__label">Срок</span>
-                    <span class="price-card__value">30-120 мин</span>
+                    <span class="price-card__value">30–120 мин</span>
                   </div>
                 </div>
-                <button class="prices__btn">ЗАКАЗАТЬ</button>
+
+                <button class="price-card__btn">
+                  ЗАКАЗАТЬ
+                  <img src="./img/go.svg" alt="">
+                </button>
               </div>
 
               <div class="price-card swiper-slide">
-                <span class="price-card__name">Тестирование с выдачей технического заключения</span>
-                <div class="price-card__meta">
-                  <div class="price-card__meta-item">
+                <h3 class="price-card__title">
+                  Тестирование с выдачей технического заключения
+                </h3>
+
+                <div class="price-card__info">
+                  <div class="price-card__item">
                     <span class="price-card__label">Цена</span>
                     <span class="price-card__value">1 000 ₽</span>
                   </div>
-                  <div class="price-card__meta-item">
+
+                  <div class="price-card__item">
                     <span class="price-card__label">Срок</span>
-                    <span class="price-card__value">30-120 мин</span>
+                    <span class="price-card__value">30–120 мин</span>
                   </div>
                 </div>
-                <button class="prices__btn">ЗАКАЗАТЬ</button>
+
+                <button class="price-card__btn">
+                  ЗАКАЗАТЬ
+                  <img src="./img/go.svg" alt="">
+                </button>
               </div>
 
               <div class="price-card swiper-slide">
-                <span class="price-card__name">Замена программного обеспечения</span>
-                <div class="price-card__meta">
-                  <div class="price-card__meta-item">
+                <h3 class="price-card__title">Замена программного обеспечения</h3>
+
+                <div class="price-card__info">
+                  <div class="price-card__item">
                     <span class="price-card__label">Цена</span>
                     <span class="price-card__value">1 000 ₽</span>
                   </div>
-                  <div class="price-card__meta-item">
+
+                  <div class="price-card__item">
                     <span class="price-card__label">Срок</span>
-                    <span class="price-card__value">30-120 мин</span>
+                    <span class="price-card__value">30–120 мин</span>
                   </div>
                 </div>
-                <button class="prices__btn">ЗАКАЗАТЬ</button>
+
+                <button class="price-card__btn">
+                  ЗАКАЗАТЬ
+                  <img src="./img/go.svg" alt="">
+                </button>
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
-
-          <p class="prices__note">
-            Все цены указаны с учетом НДС. Стоимость ремонта указана
-            на единичную услугу. Для получения коммерческого
-            предложения на постоянное обслуживание, оставьте заявку.
-          </p>
-
-          <a href="#" class="prices__link">Получить коммерческое предложение</a>
         </div>
       </section>
+
+      <div class="prices__offer">
+        <p class="prices__note">
+          Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+          услугу. Для получения коммерческого предложения на постоянное
+          обслуживание, оставьте заявку.
+        </p>
+
+        <a href="#" class="prices__link"> Получить коммерческое предложение </a>
+      </div>
 
       <footer class="site-footer">
         <div class="site-footer__copy">
@@ -491,10 +533,13 @@
           <span>Разработано командой Apesonq</span>
         </div>
 
-        <a href="#" class="site-footer__privacy">Политика конфиденциальности</a>
+        <a href="#" class="site-footer__privacy">
+          Политика конфиденциальности
+        </a>
 
         <p class="site-footer__info">
-          Информация, размещённая на данной странице,<br>не является публичной офертой
+          Информация, размещённая на данной странице,<br>
+          не является публичной офертой
         </p>
       </footer>
     </main>
