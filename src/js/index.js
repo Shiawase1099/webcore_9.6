@@ -85,7 +85,7 @@ new Swiper('.prices-slider', {
   spaceBetween: 16,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: '.prices-slider .swiper-pagination',
     clickable: true
   }
 })

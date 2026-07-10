@@ -71,3 +71,15 @@
     }
   }
 }
+
+.prices-card__info {
+  width: 260px;
+  height: 200px;
+  padding: 16px;
+  background: $white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+}
